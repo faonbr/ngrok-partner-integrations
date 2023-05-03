@@ -1,12 +1,18 @@
-The ngrok SSO Integration allows Auth0 to act as the identity provider for your ngrok-frontended application.
+The ngrok SSO Integration allows Auth0 to be the identity provider for your application with no code changes.
+
+## What is ngrok?
+
+ngrok is the fastest way to provide connectivity, security, and observability to your production applications. ngrok's ingress-as-a-service platform adds secure SAML authentication to any application without any code changes allowing you to focus on delivering value to your users.
 
 ## Prerequisites
 
-1. An ngrok enterprise account with admin access to configure a cloud edge with a SAML route.
+1. An ngrok enterprise account.
 1. Set up a Connection, which is a source of users. Connections can be databases, social identity providers, or enterprise identity providers, and can be shared among different applications. You may set up more than one connection for use with SSO integrations.
 
 
 ## Configure Auth0 SSO Integration
+
+Inside your Auth0 account:
 
 1. Select **Add Integration**, select your **Tenant** and select **Continue**.
 
@@ -24,7 +30,7 @@ The ngrok SSO Integration allows Auth0 to act as the identity provider for your 
 
 To configure the integration with **ngrok**, follow the steps below with the data shown in the **Tutorial** view (which will appear when you save the initial configuration settings).
 
-1. Log into [ngrok dashboard](https://dashboard.ngrok.com/) using your ngrok account.
+1. Log into the [ngrok dashboard](https://dashboard.ngrok.com/) using your ngrok account.
 
 1. Select **Cloud Edge** > **Edges** and create a new HTTPS edge.
 
@@ -34,7 +40,7 @@ To configure the integration with **ngrok**, follow the steps below with the dat
 
 1. Copy both the **ACS URL** and the **Entity ID** URls and update the **Settings** view of the ngrok SSO configuration in **Auth0**.
 
-1. Select **Start a tunnel** and follow the instructions to run ngrok in a terminal.
+1. Back in the ngrok dashboard, select **Start a tunnel** and follow the instructions to run the ngrok agent on the same network your application is running on.
 
 1. Open the **Endpoints** URL of the ngrok edge in a new browser tab (You use this URL to test the Auth0 authentication).
 
@@ -49,3 +55,5 @@ To configure the integration with **ngrok**, follow the steps below with the dat
 
 * **Wrong email or password** in Auth0's login page: Verify that the user is registered in Auth0.
    **Fix**: In the **Auth0 dashboard**, select **User Management** > **Users** and create a new user and verify how to [configure the sources of identity to use](https://auth0.com/docs/get-started/applications/update-application-connections) in your SSO integration.
+   
+* If you are still having trouble configuring this integration, please reach out to [ngrok Support](mailto:support@ngrok.com).
