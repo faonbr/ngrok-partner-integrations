@@ -24,7 +24,7 @@ The ngrok SSO Integration allows Auth0 to act as the identity provider for your 
 
 To configure the integration with **ngrok**, follow the steps below with the data shown in the **Tutorial** view (which will appear when you save the initial configuration settings).
 
-1. Log into **ngrok** using your ngrok account.
+1. Log into [ngrok dashboard](https://dashboard.ngrok.com/) using your ngrok account.
 
 1. Select **Cloud Edge** > **Edges** and create a new HTTPS edge.
 
@@ -37,6 +37,7 @@ To configure the integration with **ngrok**, follow the steps below with the dat
 1. Select **Start a tunnel** and follow the instructions to run ngrok in a terminal.
 
 1. Open the **Endpoints** URL of the ngrok edge in a new browser tab (You use this URL to test the Auth0 authentication).
+
 
 ## Troubleshooting
 
