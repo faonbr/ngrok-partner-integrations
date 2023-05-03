@@ -2,15 +2,13 @@ The ngrok SSO Integration allows Auth0 to act as the identity provider for your 
 
 ## Prerequisites
 
-1. An Auth0 account and tenant. [Sign up for free](https://auth0.com/signup).
-2. An ngrok enterprise account with admin access to configure a cloud edge with a SAML route.
+1. An ngrok enterprise account with admin access to configure a cloud edge with a SAML route.
+1. Set up a Connection, which is a source of users. Connections can be databases, social identity providers, or enterprise identity providers, and can be shared among different applications. You may set up more than one connection for use with SSO integrations.
 
 
-## Configure the Auth0 SSO Integration
+## Configure Auth0 SSO Integration
 
-1. Select **Add Integration** (at the top of this page).
-
-1. Read the necessary access requirements, and select **Continue**.
+1. Select **Add Integration**, select your **Tenant** and select **Continue**.
 
 1. Enter a **Name**, then configure the integration using the following fields:
    * **Callback URL**: Enter a temporary value `https://temporary` (later you replace this value with the **ACS URL** URL of the ngrok's SAML route).
@@ -20,6 +18,7 @@ The ngrok SSO Integration allows Auth0 to act as the identity provider for your 
 1. In the **Tutorial** view, open the **Identity Provider Metadata** URL in a new browser tab and download the metadata xml file.
 
 1. Select the **Connections** view and [configure the sources of identity to use](https://auth0.com/docs/get-started/applications/update-application-connections).
+
 
 ## Set up ngrok
 
