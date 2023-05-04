@@ -1,6 +1,16 @@
 [
     {
-        "name": "addon.samlp.email",
-        "label": "Email"
+        "name": "callbacks",
+        "label": "Callback URL",
+        "placeholder": "Callback URL",
+        "dataType":"uri",
+        "required":true
+    },
+    {
+        "name": "addons.samlp.audience",
+        "label": "Audience",
+        "placeholder": "Audience",
+        "dataType":"string",
+        "required":true
     }
 ]
