@@ -28,7 +28,7 @@ Inside your Auth0 account:
 
 ## Set up ngrok
 
-To configure the integration with **ngrok**, follow the steps below with the data shown in the **Tutorial** view (which will appear when you save the initial configuration settings).
+To configure the integration with **ngrok**, follow the steps below with the data shown in the **Tutorial** view (which will appear after you save the initial configuration settings).
 
 1. Log into the [ngrok dashboard](https://dashboard.ngrok.com/) using your ngrok account.
 
@@ -38,11 +38,11 @@ To configure the integration with **ngrok**, follow the steps below with the dat
 
 1. Select **Upload XML**, open the **Identity Provider Metadata** xml file you downloaded from **Auth0**, and then select **Save**.
 
-1. Copy both the **ACS URL** and the **Entity ID** URls and update the **Settings** view of the ngrok SSO configuration in **Auth0**.
+1. Copy both the **ACS URL** and the **Entity ID** URls and update the **Settings** view of the ngrok SSO configuration page in **Auth0**.
 
-1. Back in the ngrok dashboard, select **Start a tunnel** and follow the instructions to run the ngrok agent on the same network your application is running on.
+1. Back to the ngrok dashboard, select **Start a tunnel** and follow the instructions to run the ngrok agent on the same network your application is running on.
 
-1. Open the **Endpoints** URL of the ngrok edge in a new browser tab (You use this URL to test the Auth0 authentication).
+1. Open the **Endpoints** URL provided by the ngrok edge in a new browser (You use this URL to test the Auth0 uthentication).
 
 
 ## Troubleshooting
