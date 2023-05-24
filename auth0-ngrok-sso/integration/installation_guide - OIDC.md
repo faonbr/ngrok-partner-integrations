@@ -2,12 +2,12 @@ The ngrok SSO Integration allows Auth0 to be the identity provider for your appl
 
 ## What is ngrok?
 
-ngrok is the fastest way to provide connectivity, security, and observability to your production applications. ngrok's ingress-as-a-service platform adds secure SAML authentication to any application without any code changes allowing you to focus on delivering value to your users.
+ngrok is the fastest way to provide connectivity, security, and observability to your production applications. ngrok's ingress-as-a-service platform adds OpenID Connect authorization to any application without any code changes allowing you to focus on delivering value to your users.
 
 ## Prerequisites
 
-1. An ngrok account.
-1. Set up a Connection, which is a source of users. Connections can be databases, social identity providers, or enterprise identity providers, and can be shared among different applications. You may set up more than one connection for use with SSO integrations.
+1. An ngrok Pro/Enterprise account with an access token or admin access to configure edges with OpenID Connect.
+1. Set up an Auth0 Connection, which is a source of users. Auth0 Connections can be databases, social identity providers, or enterprise identity providers, and can be shared among different Auth0 applications.
 
 
 ## Step 1: Configure Auth0 SSO Integration
@@ -40,20 +40,20 @@ ngrok can leverage Auth0 SSO in two ways:
 
 ### **Option 1**: ngrok CLI
 
-**Note:** For this tutorial, we assume you have an app running locally (i.e., on `localhost:3000`) with the ngrok client installed.
+**Note:** For this tutorial, we assume you have an app running locally (i.e. on `localhost:3000`) with the ngrok client installed.
 
 1. Launch a terminal
 
 1. Enter the following command to launch an ngrok tunnel with Auth0 SSO:
     ```bash
     ngrok http 3000 --oidc=AUTH0_OAUTH_URL \
-    --oidc-client-id=Auth0_CLIENT_ID \
-    --oidc-client-secret=Auth0_CLIENT_SECRET \
+    --oidc-client-id=AUTH0_CLIENT_ID \
+    --oidc-client-secret=AUTH0_CLIENT_SECRET \
     ```
     **Note**: Replace the following with values:
-    - Auth0_OAUTH_URL: The domain value you copied from Auth0, in the form of an URL (i.e. `https://dev-abcd1234.us.auth0.com/`).
-    - Auth0_CLIENT_ID: The client id you copied from Auth0.
-    - Auth0_CLIENT_SECRET: The client secret you copied from Auth0.
+    - AUTH0_OAUTH_URL: The domain value you copied from Auth0, in the form of an URL (i.e. `https://dev-abcd1234.us.auth0.com/`).
+    - AUTH0_CLIENT_ID: The client id you copied from Auth0.
+    - AUTH0_CLIENT_SECRET: The client secret you copied from Auth0.
     
     Alternatively, add the `--domain YOUR_DOMAIN` argument to get your custom URL, replacing `YOUR_DOMAIN` with your URL of preference.
 
@@ -93,7 +93,7 @@ To configure an edge with Auth0:
 
     1. Launch a tunnel:
         * Launch a terminal.
-        * Paste the command but replace `http://localhost:80` with your localhost app address (i.e., `http://localhost:3000`).
+        * Paste the command but replace `http://localhost:80` with your localhost app address (i.e. `http://localhost:3000`).
         * Select **Enter** and an ngrok tunnel associated with your edge configuration will launch.
 
     1. To confirm that the tunnel is connected to your edge:
