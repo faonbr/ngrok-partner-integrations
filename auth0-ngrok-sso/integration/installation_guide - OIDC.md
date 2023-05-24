@@ -2,7 +2,7 @@ The ngrok SSO Integration allows Auth0 to be the identity provider for your appl
 
 ## What is ngrok?
 
-ngrok is the fastest way to provide connectivity, security, and observability to your production applications. ngrok's ingress-as-a-service platform adds OpenID Connect authorization to any application without any code changes allowing you to focus on delivering value to your users.
+ngrok is the fastest way to provide connectivity, security, and observability to your production applications. ngrok's ingress-as-a-service platform adds OpenID Connect to any application without any code changes allowing you to focus on delivering value to your users.
 
 ## Prerequisites
 
